@@ -1,0 +1,8 @@
+vscode
+
+"start": "set NODE_OPTIONS=--openssl-legacy-provider && react-scripts start"
+
+
+codesanbox
+
+"start": "export NODE_OPTIONS=--openssl-legacy-provider && react-scripts start",
