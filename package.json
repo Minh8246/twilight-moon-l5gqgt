@@ -11,8 +11,8 @@
     "react-scripts": "^3.4.1"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
+    "start": "export NODE_OPTIONS=--openssl-legacy-provider && react-scripts start",
+    "build": "NODE_OPTIONS=--openssl-legacy-provider react-scripts build",
     "test": "react-scripts test",
     "format": "prettier --write \"**/*.+(js|json|css|md|mdx|html)\""
   },
@@ -24,7 +24,12 @@
       "pre-commit": "lint-staged && npm run build"
     }
   },
-  "browserslist": [">0.2%", "not dead", "not ie <= 11", "not op_mini all"],
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ],
   "devDependencies": {
     "prettier": "^1.19.1",
     "husky": "^4.2.3",
