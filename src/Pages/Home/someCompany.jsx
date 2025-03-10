@@ -56,15 +56,19 @@ const SomeCompany = () => {
           nextEl: '.next-1',
           prevEl: '.prev-1',
         }}
-        // autoplay={{
-        //   delay: 3000,
-        //   disableOnInteraction: false,
-        // }}
+        autoplay={{
+          delay: 5000,
+          disableOnInteraction: false,
+        }}
         loop={true}
         spaceBetween={10}
         slidesPerView={3}
-        modules={[Navigation]}
+        modules={[Navigation, Autoplay]}
         breakpoints={{
+          0: {
+            slidesPerView: 1,
+            spaceBetween: 10,
+          },
           640: {
             slidesPerView: 1,
             spaceBetween: 10,

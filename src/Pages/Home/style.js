@@ -174,7 +174,8 @@ export const StyledAbout = Styled.div`
 
     .main-content{
     width: 100%;
-    max-width: 1400px;
+    max-width: min(1400px, calc(100% - 40px));
+    
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -192,6 +193,16 @@ export const StyledAbout = Styled.div`
         display: flex;
         justify-content: space-between;
         flex-wrap: wrap;
+        gap:40px;
+        }
+        .container2{
+           background-color: white;
+           border-radius: 20px;
+        min-width:min(876px, 100%);
+        display: flex;
+        flex: 2;
+        justify-content: space-between;
+        flex-wrap: wrap;
         }
 `
 export const StyledNewsContainer = Styled.div`
@@ -199,6 +210,7 @@ export const StyledNewsContainer = Styled.div`
   background: white ;
   padding: 16px;
   border-radius: 10px;
+  flex: 1;
 `
 export const StyledTitle = Styled.div`
   font-size: 18px;
